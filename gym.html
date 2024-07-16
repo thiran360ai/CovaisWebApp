@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gym Website</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Custom CSS */
+    .hero-section {
+      background-image: url('gym-hero.jpg'); /* Replace with your image */
+      background-size: cover;
+      background-position: center;
+      height: 500px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #ffffff;
+    }
+    .services-section {
+      background-color: #f8f9fa;
+      padding: 50px 0;
+    }
+    .trainers-section {
+      padding: 50px 0;
+    }
+    .contact-section {
+      padding: 50px 0;
+    }
+    body {
+      background-image: url(./IMAGE/gym\ bk\ 2.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      background-attachment: fixed;
+    }
+    .card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 18px;
+  transition: transform 0.3s ease; /* Smooth transition for the transform property */
+}
+
+.card:hover {
+  transform: scale(1.1); /* Scale the card to 110% on hover */
+}
+
+    .card {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      border-radius: 18px;
+      transition: transform 0.3s ease; /* Smooth transition for the transform property */
+    }
+    .card:hover {
+      transform: scale(1.1); /* Scale the card to 110% on hover */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">ROYAL GYM</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#trainers">Trainers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="trainers" class="trainers-section">
+    <div class="container">
+      <h2 class="text-center mb-5">Our Trainers</h2>
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <div class="card">
+            <img src="./IMAGE/G1.png" class="card-img-top" alt="Trainer 1">
+            <div class="card-body">
+              <h5 class="card-title">Trainer 1</h5>
+              <p class="card-text">Certified Personal Trainer</p>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#trainer1Modal">Book Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card">
+            <img src="./IMAGE/G2.jpg" class="card-img-top" alt="Trainer 2">
+            <div class="card-body">
+              <h5 class="card-title">Trainer 2</h5>
+              <p class="card-text">Fitness Instructor</p>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#trainer2Modal">Book Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card">
+            <img src="./IMAGE/G3.png" class="card-img-top" alt="Trainer 3">
+            <div class="card-body">
+              <h5 class="card-title">Trainer 3</h5>
+              <p class="card-text">Yoga Specialist</p>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#trainer3Modal">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trainer 1 Modal -->
+  <div class="modal fade" id="trainer1Modal" tabindex="-1" role="dialog" aria-labelledby="trainer1ModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="trainer1ModalLabel">Book Trainer 1</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Form for Trainer 1 booking -->
+          <form id="trainer1Form">
+            <div class="form-group">
+              <label for="trainer1Name">Your Name</label>
+              <input type="text" class="form-control" id="trainer1Name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+              <label for="trainer1Email">Your Email</label>
+              <input type="email" class="form-control" id="trainer1Email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+              <label for="trainer1Message">Additional Comments</label>
+              <textarea class="form-control" id="trainer1Message" rows="3" placeholder="Enter any additional comments"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Trainer 2 Modal -->
+  <div class="modal fade" id="trainer2Modal" tabindex="-1" role="dialog" aria-labelledby="trainer2ModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="trainer2ModalLabel">Book Trainer 2</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Form for Trainer 2 booking -->
+          <form id="trainer2Form">
+            <div class="form-group">
+              <label for="trainer2Name">Your Name</label>
+              <input type="text" class="form-control" id="trainer2Name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+              <label for="trainer2Email">Your Email</label>
+              <input type="email" class="form-control" id="trainer2Email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+              <label for="trainer2Message">Additional Comments</label>
+              <textarea class="form-control" id="trainer2Message" rows="3" placeholder="Enter any additional comments"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Trainer 3 Modal -->
+  <div class="modal fade" id="trainer3Modal" tabindex="-1" role="dialog" aria-labelledby="trainer3ModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="trainer3ModalLabel">Book Trainer 3</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Form for Trainer 3 booking -->
+          <form id="trainer3Form">
+            <div class="form-group">
+              <label for="trainer3Name">Your Name</label>
+              <input type="text" class="form-control" id="trainer3Name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+              <label for="trainer3Email">Your Email</label>
+              <input type="email" class="form-control" id="trainer3Email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+              <label for="trainer3Message">Additional Comments</label>
+              <textarea class="form-control" id="trainer3Message" rows="3" placeholder="Enter any additional comments"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Success Modal -->
+  <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="successModalLabel">Success!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="green" class="bi bi-check-circle" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M7.146 10.354a.5.5 0 0 0 .708 0l3-3a.5.5 0 1 0-.708-.708L7.5 9.793 5.854 8.146a.5.5 0 1 0-.708.708l2.5 2.5z"/>
+            <path fill-rule="evenodd" d="M8 0A8 8 0 1 0 8 16A8 8 0 0 0 8 0zM1 8A7 7 0 0 1 8 1a7 7 0 0 1 7 7a7 7 0 0 1-7 7A7 7 0 0 1 1 8z"/>
+          </svg>
+          <p class="ml-3">Your message has been sent successfully.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS, Popper.js, and jQuery (Optional for Bootstrap functionality) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Custom JavaScript for Form Submission and Modal -->
+  <script>
+    // Function to show success modal and reset form after submission
+    function showSuccessModal(formId) {
+      $('#' + formId).trigger('reset'); // Reset the form
+      $('#successModal').modal('show'); // Show the success modal
+    }
+
+    // Submit handlers for each trainer form
+    $('#trainer1Form').submit(function(event) {
+      event.preventDefault();
+      showSuccessModal('trainer1Form');
+    });
+
+    $('#trainer2Form').submit(function(event) {
+      event.preventDefault();
+      showSuccessModal('trainer2Form');
+    });
+
+    $('#trainer3Form').submit(function(event) {
+      event.preventDefault();
+      showSuccessModal('trainer3Form');
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barber Shop Website</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Custom CSS */
+    .card {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      border-radius: 18px;
+    }
+    .hero-section {
+      background-image: url('barber-shop.jpg'); /* Replace with your image */
+      background-size: cover;
+      background-position: center;
+      height: 500px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #ffffff;
+    }
+    .services-section {
+      padding: 50px 0;
+    }
+    .contact-section .row {
+      opacity: 15;
+      backdrop-filter: blur(8px); /* Blur effect */
+      border-radius: 15px; /* Rounded corners */
+      padding: 40px;
+      margin-top: 50px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+    }
+    .contact-section h2 {
+      color: #333;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-control {
+      background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for input fields */
+      border: none;
+      border-radius: 8px;
+      padding: 10px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* Box shadow for input fields */
+    }
+    .btn-primary {
+      background-color: #4CAF50;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(76, 175, 80, 0.5); /* Box shadow for button */
+      color: white;
+    }
+    .btn-primary:hover {
+      background-color: #45a049; /* Darker shade on hover */
+    }
+    body {
+      background-image: url(./IMAGE/cnt\ 1.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      background-attachment: fixed;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Barber Shop</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <style>
+    .card {
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+    }
+    .card img {
+      transition: transform 0.3s ease;
+    }
+    .card:hover img {
+      transform: scale(1.1);
+    }
+    .card-body {
+      padding: 20px;
+    }
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .card-text {
+      font-size: 1.1rem;
+    }
+    .btn-primary {
+      transition: background-color 0.3s ease;
+    }
+    .btn-primary:hover {
+      background-color: #007bff;
+    }
+  </style>
+
+  <section id="services" class="services-section">
+    <div class="container">
+      <h2 class="text-center mb-5">Our Services</h2>
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <div class="card">
+            <img src="./IMAGE/B1.jpeg" class="card-img-top" alt="Haircut">
+            <div class="card-body">
+              <h5 class="card-title">Haircuts</h5>
+              <p class="card-text">Professional haircuts for men and boys.</p>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#haircutModal">Book Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card">
+            <img src="./IMAGE/B2.jpeg" class="card-img-top" alt="Shave">
+            <div class="card-body">
+              <h5 class="card-title">Shaves</h5>
+              <p class="card-text">Traditional and modern shaving services.</p>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#shaveModal">Book Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card">
+            <img src="./IMAGE/B3.jpeg" class="card-img-top" alt="Beard Trim">
+            <div class="card-body">
+              <h5 class="card-title">Beard Trims</h5>
+              <p class="card-text">Expert beard grooming and shaping.</p>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#beardTrimModal">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modals for each service -->
+  <div class="modal fade" id="haircutModal" tabindex="-1" role="dialog" aria-labelledby="haircutModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h5 class="modal-title" id="haircutModalLabel">Book Haircut Service</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        
+        <!-- Modal Body -->
+        <div class="modal-body">
+          <!-- Haircut booking form -->
+          <form id="haircutForm">
+            <div class="form-group">
+              <label for="haircutName">Your Name</label>
+              <input type="text" class="form-control" id="haircutName" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+              <label for="haircutEmail">Your Email</label>
+              <input type="email" class="form-control" id="haircutEmail" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+              <label for="haircutMessage">Additional Comments</label>
+              <textarea class="form-control" id="haircutMessage" rows="3" placeholder="Enter any additional comments"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="shaveModal" tabindex="-1" role="dialog" aria-labelledby="shaveModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h5 class="modal-title" id="shaveModalLabel">Book Shave Service</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        
+        <!-- Modal Body -->
+        <div class="modal-body">
+          <!-- Shave booking form -->
+          <form id="shaveForm">
+            <div class="form-group">
+              <label for="shaveName">Your Name</label>
+              <input type="text" class="form-control" id="shaveName" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+              <label for="shaveEmail">Your Email</label>
+              <input type="email" class="form-control" id="shaveEmail" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+              <label for="shaveMessage">Additional Comments</label>
+              <textarea class="form-control" id="shaveMessage" rows="3" placeholder="Enter any additional comments"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="beardTrimModal" tabindex="-1" role="dialog" aria-labelledby="beardTrimModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h5 class="modal-title" id="beardTrimModalLabel">Book Beard Trim Service</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        
+        <!-- Modal Body -->
+        <div class="modal-body">
+          <!-- Beard trim booking form -->
+          <form id="beardTrimForm">
+            <div class="form-group">
+              <label for="beardTrimName">Your Name</label>
+              <input type="text" class="form-control" id="beardTrimName" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+              <label for="beardTrimEmail">Your Email</label>
+              <input type="email" class="form-control" id="beardTrimEmail" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+              <label for="beardTrimMessage">Additional Comments</label>
+              <textarea class="form-control" id="beardTrimMessage" rows="3" placeholder="Enter any additional comments"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Success Modal -->
+  <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="successModalLabel">Success!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="green" class="bi bi-check-circle" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M7.146 10.354a.5.5 0 0 0 .708 0l3-3a.5.5 0 1 0-.708-.708L7.5 9.793 5.854 8.146a.5.5 0 1 0-.708.708l2.5 2.5z"/>
+            <path fill-rule="evenodd" d="M8 0A8 8 0 1 0 8 16A8 8 0 0 0 8 0zM1 8A7 7 0 0 1 8 1a7 7 0 0 1 7 7a7 7 0 0 1-7 7A7 7 0 0 1 1 8z"/>
+          </svg>
+          <p class="ml-3">Your booking has been successfully submitted.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS, Popper.js, and jQuery (Optional for Bootstrap functionality) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Custom JavaScript for Form Submission and Modal -->
+  <script>
+    // Function to show success modal and reset form after submission
+    function showSuccessModal(formId) {
+      $('#' + formId).trigger('reset'); // Reset the form
+      $('#successModal').modal('show'); // Show the success modal
+    }
+
+    // Submit handlers for each form
+    $('#haircutForm').submit(function(event) {
+      event.preventDefault(); // Prevent default form submission
+      showSuccessModal('haircutForm'); // Call function to show success modal
+    });
+
+    $('#shaveForm').submit(function(event) {
+      event.preventDefault(); // Prevent default form submission
+      showSuccessModal('shaveForm'); // Call function to show success modal
+    });
+
+    $('#beardTrimForm').submit(function(event) {
+      event.preventDefault(); // Prevent default form submission
+      showSuccessModal('beardTrimForm'); // Call function to show success modal
+    });
+  </script>
+
+</body>
+</html>

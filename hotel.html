@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Room Booking</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Custom CSS */
+    /* Add your custom styles here */
+    body {
+      background-image: url("./IMAGE/hotel\ bk\ 1.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      background-attachment: fixed;
+    }
+
+    .card {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      border-radius: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">ROYAL HOTEL</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#room-selection">Room Selection</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#booking-details">Booking Details</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#summary">Summary</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Room Selection Section -->
+  <section id="room-selection" class="room-selection">
+    <div class="container">
+      <h2 class="text-center mb-5">Room Selection</h2>
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <div class="card">
+            <img src="./IMAGE/R1.jpeg" class="card-img-top" alt="Room 1">
+            <div class="card-body">
+              <h5 class="card-title">Deluxe Room</h5>
+              <p class="card-text">Starting from $150/night</p>
+              <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#bookingModal1">Book Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card">
+            <img src="./IMAGE/R2.jpeg" class="card-img-top" alt="Room 2">
+            <div class="card-body">
+              <h5 class="card-title">Executive Suite</h5>
+              <p class="card-text">Starting from $250/night</p>
+              <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#bookingModal2">Book Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card">
+            <img src="./IMAGE/R3.jpeg" class="card-img-top" alt="Room 3">
+            <div class="card-body">
+              <h5 class="card-title">Penthouse Suite</h5>
+              <p class="card-text">Starting from $500/night</p>
+              <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#bookingModal3">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modals for booking each room -->
+  <!-- Modal for Deluxe Room -->
+  <div class="modal fade" id="bookingModal1" tabindex="-1" role="dialog" aria-labelledby="bookingModal1Label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="bookingModal1Label">Book Deluxe Room</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="bookingForm1">
+            <div class="form-group">
+              <label for="inputEmail1">Email address</label>
+              <input type="email" class="form-control" id="inputEmail1" placeholder="Enter email" required>
+            </div>
+            <div class="form-group">
+              <label for="inputName1">Full Name</label>
+              <input type="text" class="form-control" id="inputName1" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+              <label for="inputPhone1">Phone Number</label>
+              <input type="tel" class="form-control" id="inputPhone1" placeholder="Enter phone number" required>
+            </div>
+            <div class="form-group">
+              <label for="inputCheckIn1">Check-In Date</label>
+              <input type="date" class="form-control" id="inputCheckIn1" required>
+            </div>
+            <div class="form-group">
+              <label for="inputCheckOut1">Check-Out Date</label>
+              <input type="date" class="form-control" id="inputCheckOut1" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Booking</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Executive Suite -->
+  <div class="modal fade" id="bookingModal2" tabindex="-1" role="dialog" aria-labelledby="bookingModal2Label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="bookingModal2Label">Book Executive Suite</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="bookingForm2">
+            <div class="form-group">
+              <label for="inputEmail2">Email address</label>
+              <input type="email" class="form-control" id="inputEmail2" placeholder="Enter email" required>
+            </div>
+            <div class="form-group">
+              <label for="inputName2">Full Name</label>
+              <input type="text" class="form-control" id="inputName2" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+              <label for="inputPhone2">Phone Number</label>
+              <input type="tel" class="form-control" id="inputPhone2" placeholder="Enter phone number" required>
+            </div>
+            <div class="form-group">
+              <label for="inputCheckIn2">Check-In Date</label>
+              <input type="date" class="form-control" id="inputCheckIn2" required>
+            </div>
+            <div class="form-group">
+              <label for="inputCheckOut2">Check-Out Date</label>
+              <input type="date" class="form-control" id="inputCheckOut2" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Booking</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Penthouse Suite -->
+  <div class="modal fade" id="bookingModal3" tabindex="-1" role="dialog" aria-labelledby="bookingModal3Label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="bookingModal3Label">Book Penthouse Suite</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="bookingForm3">
+            <div class="form-group">
+              <label for="inputEmail3">Email address</label>
+              <input type="email" class="form-control" id="inputEmail3" placeholder="Enter email" required>
+            </div>
+            <div class="form-group">
+              <label for="inputName3">Full Name</label>
+              <input type="text" class="form-control" id="inputName3" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+              <label for="inputPhone3">Phone Number</label>
+              <input type="tel" class="form-control" id="inputPhone3" placeholder="Enter phone number" required>
+            </div>
+            <div class="form-group">
+              <label for="inputCheckIn3">Check-In Date</label>
+              <input type="date" class="form-control" id="inputCheckIn3" required>
+            </div>
+            <div class="form-group">
+              <label for="inputCheckOut3">Check-Out Date</label>
+              <input type="date" class="form-control" id="inputCheckOut3" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Booking</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Success Modal -->
+  <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="successModalLabel">Booking Successful!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="green" class="bi bi-check-circle" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M7.146 10.354a.5.5 0 0 0 .708 0l3-3a.5.5 0 1 0-.708-.708L7.5 9.793 5.854 8.146a.5.5 0 1 0-.708.708l2.5 2.5z"/>
+            <path fill-rule="evenodd" d="M8 0A8 8 0 1 0 8 16A8 8 0 0 0 8 0zM1 8A7 7 0 0 1 8 1a7 7 0 0 1 7 7a7 7 0 0 1-7 7A7 7 0 0 1 1 8z"/>
+          </svg>
+          <p class="ml-3">Your room has been booked successfully!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS, Popper.js, and jQuery (Optional for Bootstrap functionality) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Custom JavaScript for Form Submission and Modal -->
+  <script>
+    // Handle form submission for Deluxe Room
+    $('#bookingForm1').submit(function(event) {
+      event.preventDefault();
+      $('#bookingModal1').modal('hide'); // Hide the booking modal
+      $('#successModal').modal('show'); // Show the success modal
+      resetForm('#bookingForm1'); // Reset the form fields
+    });
+
+    // Handle form submission for Executive Suite
+    $('#bookingForm2').submit(function(event) {
+      event.preventDefault();
+      $('#bookingModal2').modal('hide'); // Hide the booking modal
+      $('#successModal').modal('show'); // Show the success modal
+      resetForm('#bookingForm2'); // Reset the form fields
+    });
+
+    // Handle form submission for Penthouse Suite
+    $('#bookingForm3').submit(function(event) {
+      event.preventDefault();
+      $('#bookingModal3').modal('hide'); // Hide the booking modal
+      $('#successModal').modal('show'); // Show the success modal
+      resetForm('#bookingForm3'); // Reset the form fields
+    });
+
+    // Optional: Reset form fields
+    function resetForm(formId) {
+      $(formId)[0].reset();
+    }
+  </script>
+
+</body>
+</html>
